@@ -1,3 +1,6 @@
+input.onButtonPressed(Button.A, function () {
+    radio.setGroup(255)
+})
 input.onGesture(Gesture.LogoUp, function () {
     radio.sendString("back")
 })
@@ -10,12 +13,12 @@ input.onGesture(Gesture.ScreenUp, function () {
 input.onButtonPressed(Button.AB, function () {
     radio.sendString("honk")
 })
+input.onButtonPressed(Button.B, function () {
+    radio.setGroup(8)
+})
 input.onGesture(Gesture.TiltRight, function () {
     radio.sendString("right")
 })
 input.onGesture(Gesture.LogoDown, function () {
     radio.sendString("foreword")
-})
-basic.forever(function () {
-    radio.setGroup(255)
 })
