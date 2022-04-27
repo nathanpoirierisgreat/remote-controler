@@ -13,6 +13,11 @@ input.onGesture(Gesture.ScreenUp, function () {
 input.onButtonPressed(Button.AB, function () {
     radio.sendString("honk")
 })
+radio.onReceivedString(function (receivedString) {
+    if (receivedString == "close garage") {
+        radio.sendString("close garage")
+    }
+})
 input.onButtonPressed(Button.B, function () {
     radio.setGroup(8)
 })
